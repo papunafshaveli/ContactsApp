@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import { HeaderContainer } from "./headerStyles";
 
 const Header = () => {
   return (
@@ -9,17 +9,3 @@ const Header = () => {
 };
 
 export default Header;
-
-const HeaderContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 50px;
-
-  background-color: grey;
-
-  h1 {
-    font-size: 6rem;
-  }
-`;

@@ -1,10 +1,9 @@
-import styled from "styled-components";
-import "./App.css";
-import Header from "./components/Header";
-import Filters from "./components/Filters";
-import { contacts } from "./db.ts";
+import Header from "./Header.tsx";
+import Filters from "./Filters.tsx";
+import { contacts } from "../db.ts";
 import { useState } from "react";
-import Contacts from "./components/Contacts.tsx";
+import Contacts from "./Contacts.tsx";
+import { AppContainer } from "./appStyles.ts";
 
 function App() {
   const [importedContacts, setImportedContacts] = useState(contacts);
@@ -48,5 +47,3 @@ function App() {
 }
 
 export default App;
-
-const AppContainer = styled.div``;

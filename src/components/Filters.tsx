@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import { BiSolidShow } from "react-icons/bi";
 import { FaSortAlphaDownAlt } from "react-icons/fa";
 import { BiSolidHide } from "react-icons/bi";
+import { FiltersContainer } from "./filterStyles";
 
 const Filters = ({
   searchInput,
@@ -49,15 +49,3 @@ const Filters = ({
 };
 
 export default Filters;
-
-const FiltersContainer = styled.div`
-  padding-top: 40px;
-
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-
-  input {
-    padding: 2px 20px;
-  }
-`;
