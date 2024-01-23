@@ -10,6 +10,6 @@ export const HeaderContainer = styled.div`
   background-color: grey;
 
   h1 {
-    font-size: 6rem;
+    font-size: 4rem;
   }
 `;

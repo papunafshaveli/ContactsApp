@@ -18,32 +18,30 @@ const Filters = ({
 }) => {
   return (
     <FiltersContainer>
-      <div>
-        {showContacts ? (
-          <BiSolidHide
-            size={25}
-            onClick={() => {
-              setShowContacts(!showContacts);
-            }}
-          />
-        ) : (
-          <BiSolidShow
-            size={25}
-            onClick={() => {
-              setShowContacts(!showContacts);
-            }}
-          />
-        )}
-      </div>
+      {showContacts ? (
+        <BiSolidHide
+          size={30}
+          onClick={() => {
+            setShowContacts(!showContacts);
+          }}
+        />
+      ) : (
+        <BiSolidShow
+          size={30}
+          onClick={() => {
+            setShowContacts(!showContacts);
+          }}
+        />
+      )}
+
       <input
         type="text"
         placeholder="Search by First Name"
         value={searchInput}
         onChange={(e) => setsearchInput(e.target.value)}
       />
-      <div>
-        <FaSortAlphaDownAlt size={25} onClick={handleSort} />
-      </div>
+
+      <FaSortAlphaDownAlt size={25} onClick={handleSort} />
     </FiltersContainer>
   );
 };

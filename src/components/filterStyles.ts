@@ -4,10 +4,15 @@ export const FiltersContainer = styled.div`
   padding-top: 40px;
 
   display: flex;
-  gap: 20px;
+  align-items: center;
   justify-content: center;
 
+  gap: 20px;
+
   input {
-    padding: 2px 20px;
+    padding: 10px 30px;
+
+    border: none;
+    border-radius: 5px;
   }
 `;
