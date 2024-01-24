@@ -2,6 +2,7 @@ import { BiSolidShow } from "react-icons/bi";
 import { FaSortAlphaDownAlt } from "react-icons/fa";
 import { BiSolidHide } from "react-icons/bi";
 import { FiltersContainer } from "./filterStyles";
+import { FaSortAlphaUp } from "react-icons/fa";
 
 const Filters = ({
   searchInput,
@@ -9,12 +10,14 @@ const Filters = ({
   setShowContacts,
   showContacts,
   handleSort,
+  sortOrder,
 }: {
   searchInput: string;
   setsearchInput: React.Dispatch<React.SetStateAction<string>>;
   setShowContacts: React.Dispatch<React.SetStateAction<boolean>>;
   showContacts: boolean;
   handleSort: () => void;
+  sortOrder: string;
 }) => {
   return (
     <FiltersContainer>
@@ -33,15 +36,17 @@ const Filters = ({
           }}
         />
       )}
-
       <input
         type="text"
         placeholder="Search by First Name"
         value={searchInput}
         onChange={(e) => setsearchInput(e.target.value)}
       />
-
-      <FaSortAlphaDownAlt size={25} onClick={handleSort} />
+      {sortOrder === "asc" ? (
+        <FaSortAlphaUp size={25} onClick={handleSort} />
+      ) : (
+        <FaSortAlphaDownAlt size={25} onClick={handleSort} />
+      )}
     </FiltersContainer>
   );
 };

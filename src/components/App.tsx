@@ -9,7 +9,7 @@ function App() {
   const [importedContacts, setImportedContacts] = useState(contacts);
   const [searchInput, setsearchInput] = useState<string>("");
   const [showContacts, setShowContacts] = useState<boolean>(false);
-  const [sortOrder, setSortOrder] = useState<"asc" | "desc" | null>(null);
+  const [sortOrder, setSortOrder] = useState<"asc" | "desc">("asc");
 
   const handleSort = () => {
     const sortedContacts = [...importedContacts];
@@ -35,6 +35,7 @@ function App() {
         setShowContacts={setShowContacts}
         showContacts={showContacts}
         handleSort={handleSort}
+        sortOrder={sortOrder}
       />
       {showContacts && (
         <Contacts
